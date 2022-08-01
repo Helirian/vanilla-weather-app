@@ -12,102 +12,113 @@
 
 <body>
     <div class="container">
-        <div class="weather-app">
-            <a href="" target="_blank" rel=""><img src="/images/dreamcatcher01.png" alt="dreamCatcherLogo" class="logo" /></a>
-            <form action="">
-                <div class="row">
-                    <div class="col-9">
-                        <input type="search" placeholder="Search for city..." class="form-control search-input" />
+        <div class="weather-app-wrap">
+            <div class="weather-app">
+                <a href="" target="_blank" rel=""><img src="/images/dreamcatcher01.png" alt="dreamCatcherLogo" class="logo" /></a>
+                <form action="">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="search" placeholder="Search for city..." class="form-control search-input" />
+                        </div>
+                        <div class="col-3 p-0">
+                            <input type="submit" class="btn btn-primary w-100" value="Search" />
+                        </div>
                     </div>
-                    <div class="col-3 p-0">
-                        <input type="submit" class="btn btn-primary w-100" value="Search">
-                    </div>
-                </div>
-            </form>
-            <div class="weatherInfo">
-                <div class="row">
-                    <div class="col-6">
-                        <h1>Kyiv</h1>
-                        <ul>
-                            <li><span>Monday 02:05</span>, clear sky</li>
-                            <li>
-                                Humidity:
-                                <strong>71%</strong>, Wind:
-                                <strong>6.17 km/h</strong>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <div class="temperature-container d-flex justify-content-end">
-                            <canvas width="52" height="52">
-                  <div>
-                    <span class="temperature">26</span>
-                    <span class="unit">C</span>
-                  </div>
-                
+                </form>
+                <div class="weatherInfo">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1 id="city">Kyiv</h1>
+                            <ul>
+                                <li><span>Monday 02:05</span>, clear sky</li>
+                                <li>Humidity: 71%,</li>
+                                <li>Wind: 6.17 km/h</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="clearfix temperature-container">
+                                <img src="/images/sun.png" alt="Clear" id="main-icon" class="float-left" />
+
+                                <strong class="temperature float-left">26</strong>
+                                <span class="units float-left"> °C | <a href=""> °F</a></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="weatherForecast row">
-                <div class="col">
-                    <div class="weatherForecastPreview">
-                        <div class="forecas-time">Sun</div>
-                        <canvas width="38" height="38">
+                <div class="weatherForecast row">
+                    <div class="col">
+                        <div class="weatherForecastPreview">
+                            <div class="forecas-time">Sun</div>
+
                             <div class="forecast-temperature">
                                 <span class="forecast-temperature-max">29</span>
                                 <span class="forecast-temperature-min">23</span>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="weatherForecastPreview">
-                        <div class="forecas-time">Mon</div>
-                        <canvas width="38" height="38">
+                    <div class="col">
+                        <div class="weatherForecastPreview">
+                            <div class="forecas-time">Mon</div>
+
                             <div class="forecast-temperature">
                                 <span class="forecast-temperature-max">26</span>
                                 <span class="forecast-temperature-min">21</span>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="weatherForecastPreview">
-                        <div class="forecas-time">Tue</div>
-                        <canvas width="38" height="38">
+                    <div class="col">
+                        <div class="weatherForecastPreview">
+                            <div class="forecas-time">Tue</div>
+
                             <div class="forecast-temperature">
                                 <span class="forecast-temperature-max">34</span>
                                 <span class="forecast-temperature-min">23</span>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="weatherForecastPreview">
-                        <div class="forecas-time">Wed</div>
-                        <canvas width="38" height="38">
+                    <div class="col">
+                        <div class="weatherForecastPreview">
+                            <div class="forecas-time">Wed</div>
+
                             <div class="forecast-temperature">
                                 <span class="forecast-temperature-max">30</span>
                                 <span class="forecast-temperature-min">22</span>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="weatherForecastPreview">
-                        <div class="forecas-time">Thu</div>
-                        <canvas width="38" height="38">
+                    <div class="col">
+                        <div class="weatherForecastPreview">
+                            <div class="forecas-time">Thu</div>
+
                             <div class="forecast-temperature">
                                 <span class="forecast-temperature-max">32</span>
                                 <span class="forecast-temperature-min">24</span>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <footer>
-                "This project was made by"
-                <a href="" target="_blank" rel="">Helirian</a> "and is " <a href="" target="_blank" rel="">open-sorced on GitHub</a> "and" <a href="" target="_blank" rel="">hosted on Netlify</a>
+                <small>
+            Project made by
+            <a href="" target="_blank" rel="">Helirian</a> and is
+            <a
+              href="https://github.com/Helirian/vanilla-weather-app"
+              target="_blank"
+              rel=""
+              >open-sorced on GitHub</a
+            >
+            and
+            <a
+              href="https://cozy-buttercream-b60c79.netlify.app/"
+              target="_blank"
+              rel=""
+              >hosted on Netlify</a
+            >
+          </small>
             </footer>
         </div>
     </div>
-
     <script src="/src/index.js"></script>
 </body>
 

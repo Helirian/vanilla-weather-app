@@ -26,8 +26,12 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
     let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.name;
+
+    celsiusTemperature = Math.round(response.data.main.temp);
+
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = celsiusTemperature;
+
     let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = response.data.weather[0].description;
     let humidityElement = document.querySelector("#humidity");
@@ -56,7 +60,32 @@ function useSubmit(event) {
     search(cityInputElement.value);
 }
 
-search("Odesa");
+function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    let temperatureElement = document.querySelector("#temperature");
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", useSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Kyiv");

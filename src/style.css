@@ -49,8 +49,18 @@ li:first-letter {
     display: flex;
 } */
 
+a {
+    text-decoration: none;
+}
+
 .temperature-container {
     position: relative;
+}
+
+.temperature-container .active:hover {
+    text-decoration: none;
+    color: #000001;
+    cursor: pointer;
 }
 
 .temperature-container img {

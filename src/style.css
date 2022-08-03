@@ -59,7 +59,7 @@ a {
 
 .temperature-container .active:hover {
     text-decoration: none;
-    color: #000001;
+    color: #000000;
     cursor: pointer;
 }
 
@@ -78,6 +78,7 @@ a {
 
 .weatherForecast {
     padding: 10px 0;
+    text-align: center;
 }
 
 .weather-app-wrap {
@@ -92,4 +93,20 @@ a {
     border: 1px solid #dadded;
     border-radius: 10px;
     margin-bottom: 5px;
+}
+
+.weatherForecast {
+    color: #000000;
+}
+
+.forecast-date {
+    font-size: 16px;
+}
+
+.forecast-temperature {
+    font-size: 13px;
+}
+
+.forecast-temperature-min {
+    opacity: 0.5;
 }

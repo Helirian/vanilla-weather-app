@@ -95,8 +95,8 @@ a {
     margin-bottom: 5px;
 }
 
-.weatherForecast {
-    color: #000000;
+#forecast {
+    margin: 0 auto;
 }
 
 .forecast-date {

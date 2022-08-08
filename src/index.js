@@ -24,14 +24,30 @@ function formatDate(timestamp) {
 }
 
 function displayForecast() {
-    let forecastElement = document.querySelector("#weatherForecast");
+    let forecastElement = document.querySelector("#forecast");
 
-    let forecastHTML = `<div class="row"`;
+    let forecastHTML = `<div class="row">`;
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-    days.forEach(function(day) {});
-    forecastHTML = forecastHTML + ``;
-
+    days.forEach(function(day) {
+        forecastHTML =
+            forecastHTML +
+            `
+                        <div class="col-2">
+                            <div class="forecast-date">
+                                ${day}</div>
+                                <img src="" alt="" />
+                            
+                            <div class="forecast-temperatures">
+                                <span class="forecast-temperature-max">29</span>
+                                <span class="forecast-temperature-min">23</span>
+                            </div>
+                        </div>
+                    `;
+    });
+    forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
+
+    //     forecastHTML = forecastHTML + ``;
 }
 
 function displayTemperature(response) {

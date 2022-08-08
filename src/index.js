@@ -29,23 +29,7 @@ function displayForecast() {
     let forecastHTML = `<div class="row"`;
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     days.forEach(function(day) {});
-    forecastHTML =
-        forecastHTML +
-        `<div class="row">
-        <div class="col">
-          <div class="forecast-date">
-            ${day}
-            <img
-              src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
-              alt=""
-            />
-          </div>
-          <div class="forecast-temperature">
-            <span class="forecast-temperature-max">29</span>
-            <span class="forecast-temperature-min">23</span>
-          </div>
-        </div>
-      </div>`;
+    forecastHTML = forecastHTML + ``;
 
     forecastElement.innerHTML = forecastHTML;
 }

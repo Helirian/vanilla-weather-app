@@ -64,8 +64,8 @@ a {
 }
 
 .temperature-container img {
-    max-width: 40px;
-    max-width: 40px;
+    max-width: 60px;
+    max-width: 60px;
 }
 
 .temperature-container strong {
@@ -101,6 +101,11 @@ a {
 
 .forecast-date {
     font-size: 16px;
+}
+
+.weatherForecast img {
+    max-width: 40px;
+    max-width: 40px;
 }
 
 .forecast-temperature {
